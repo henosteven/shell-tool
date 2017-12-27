@@ -1,0 +1,7 @@
+
+add this line to /etc/profile, then run: source /etc/profile 
+(note: change the php path)
+your should run "phc" before you commmit anything to your resp
+it is a good habit if you use vim or other editor has no syntax check
+
+alias phc="git status | grep php | awk '{cmd=\"/usr/local/php/bin/php -l \" \$NF; system(cmd)}'"
