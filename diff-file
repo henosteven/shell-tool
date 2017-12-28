@@ -1,4 +1,5 @@
 
 统计file1, file2中不一样的数据（以行为单位）
+$0 可以根据不同需求调整
 
 awk '{print $0}' file1 file2 | sort | uniq -u
