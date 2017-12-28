@@ -1,0 +1,4 @@
+
+统计file1, file2中不一样的数据（以行为单位）
+
+awk '{print $0}' file1 file2 | sort | uniq -u
