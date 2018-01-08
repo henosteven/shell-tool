@@ -1,0 +1,10 @@
+uniq 
+    经常使用的就是 -c，展示重复数字
+    还有
+        -d 只输出重复的行
+        -u 只输出不重复的行
+    还有
+        -f N 忽略第N端（空格分开）
+            例如demofile/uniq 中 -- tomato 和 ++ tomato 在 -f 1 之后就一样了
+        -s N 忽略前N个字符
+            例如demofile/uniq 中 **grape 和 ++grape 在-s 2 之后就一样了
