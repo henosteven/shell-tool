@@ -1,0 +1,13 @@
+
+log
+[error]request_url||bindCoupon||phone=15210694268||ret="xxx"
+[error]request_url||testaction||ret="xxx"
+
+get the phone
+
+1、awk -F'phone=' '$0 ~ /bindCoupon/ {print substr($2, 0, index($2, "|") - 1)}' logfile
+2、cat logfile | grep 'bindCoupon' | awk -F'phone=' '{print substr($2, 0, index($2, "|") - 1)}' 
+
+print substr($2, 0, index($2, "|") - 1)
+可以替换为
+split($2, a, "|"); print a[1]
