@@ -1,0 +1,20 @@
+#注意这里的$(())  seq [option] start step end
+start=0
+end=100
+total=0
+for i in $(seq $start 2 $end); do
+    total=$(($total+$i));
+done;
+echo $total
+
+
+start=0
+end=100
+total=0
+while [ $start -le $end ]; do  #注意这里的空格
+    if [ $(($start%2)) -eq 0 ]; then
+        total=$(($total+$start))
+    fi
+    start=$(($start+1))
+done;
+echo $total
