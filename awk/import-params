@@ -1,0 +1,6 @@
+
+//BEGIN{action} {action} END{action} 三个action均可以获取到的方式
+echo | awk -v name="jinjing" 'BEGIN{print name} {print name} END{print name}'
+
+//{action} END{action} 两个action均可以获取到的方式, 注意BEGIN中获取不到, k="v" 需要在最后面
+echo | awk  'BEGIN{print name, "test"} {print name} END{print name}' name="jinjing"
