@@ -1,0 +1,28 @@
+BEGIN {
+    test = 100
+    if (test > 80) {
+        print "yes test gt 80"
+    }
+
+    sum = 0
+    while(i <= 100) {
+        sum += i
+        i++
+    }
+    print sum
+
+    sum = 0
+    i = 0
+    do {
+        i++
+        sum += i
+    } while(i < 100)
+    print sum
+    
+    //note ""
+    user["name"] = "heno"
+    user["age"] = 28
+    for (i in user) {
+        print i, user[i]
+    }
+}
