@@ -1,3 +1,8 @@
+
+# trick: 生产22个#
+# seq -s"#" 0 10 | sed 's/[0-9]/#/g'
+
+
 #注意这里的$(())  seq [option] start step end
 start=0
 end=100
