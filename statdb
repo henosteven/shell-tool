@@ -1,0 +1,8 @@
+#!/bin/bash
+
+# 解决一个需求，如果进行了分表-这时候需要搜索数据
+# -N 输出只显示数据，不显示column，方便数据统计
+
+for i in $( seq 0 255 ); do
+    echo "select * from user_$i where username='jinjing' " | mysql -uroot -pxxxx -hhost -Pport -N
+done
