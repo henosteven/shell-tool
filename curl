@@ -1,0 +1,14 @@
+常用的curl用法
+
+普通get请求
+curl "http://www.example.com/xxx"
+
+普通post请求
+curl -d "key1=v1&key2=v2" "http://www.example.com/xxx"
+
+post json数据
+curl -l -H "Content-type: application/json" -X POST -d '{"name":"jinjing"}' "http://www.example.com/xxx"
+
+常用参数
+    -v 显示全部信息
+    --insecure 忽略https
