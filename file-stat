@@ -1,0 +1,4 @@
+
+# 统计当前git status影响的php文件代码行数
+
+git status| awk '$0 ~ /php/ {("cat " $NF " | wc -l")|getline tmp; a=a+tmp} END{print a}'
