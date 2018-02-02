@@ -1,0 +1,24 @@
+#!/bin/bash
+
+#方法定义
+stop() {
+    echo "stop"
+}
+
+start() {
+    echo "start"
+}
+
+#sh func-use stop
+#sh func-use start
+case "$1" in  #case 语法使用 $1 第一个参数
+    start)
+        start #方法调用
+        ;;
+    stop)
+        stop
+        ;;
+    *) #默认default
+        echo "Usage:$0 {start|stop}"
+        ;;
+esac
